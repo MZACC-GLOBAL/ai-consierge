@@ -45,9 +45,9 @@
   
   const iframe = document.createElement("iframe");
   let dataObj = {}
-  iframe.src = "https://makvueconcierge/widget-ui?siteId=" + siteId +"&userId=" +userId  +'&userName='+userName +'&email='+email +'&checkInTime='+checkIn+'&checkOutTime='+checkOut ;
+  iframe.src = "https://makvueconcierge.com/widget-ui?siteId=" + siteId +"&userId=" +userId  +'&userName='+userName +'&email='+email +'&checkInTime='+checkIn+'&checkOutTime='+checkOut ;
   try {    
-    await fetch(`https://makvueconcierge/api/widget/widget-settings?siteId=${siteId}`).then((res)=>res.json()).then((data)=>dataObj =data) 
+    await fetch(`https://makvueconcierge.com/api/widget/widget-settings?siteId=${siteId}`).then((res)=>res.json()).then((data)=>dataObj =data) 
   } catch (error) {
     alert('Error fetching widget settings')
   }
