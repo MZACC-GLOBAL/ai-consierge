@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "./Constants.scss"as m;
+
+
+.inputStyle{
+    background-color: map.get(m.$color-palette,"light-grey");
+}
+

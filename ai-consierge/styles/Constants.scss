@@ -1,0 +1,36 @@
+$color-palette: (
+  "ocean-blue": #004E7C,//primary buttons,headers
+  "oceanicc-blue": #004e7c96,//primary buttons,headers
+  "golden-honey":#F5B700,// highlights CTAs
+  "soft-teal":#A0D6D3,//icons,secondary cards
+  "white-marble":#FAFAFA,// background
+  "deep-navy":#002B47,//text headers
+  "light-grey":#F3F4F6 // dividers, table rows
+);
+
+$font-primary: 'Inter', sans-serif;           // Body text & tables
+$font-secondary: 'Poppins', 'DM Sans', sans-serif; // Headings, cards & buttons
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Letter Spacing (slightly tight)
+$letter-spacing-tight: -0.015em;
+
+// ===============================
+// Typography Mixins
+// ===============================
+@mixin font-primary($weight: $font-weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  letter-spacing: $letter-spacing-tight;
+}
+
+@mixin font-secondary($weight: $font-weight-semibold) {
+  font-family: $font-secondary;
+  font-weight: $weight;
+  letter-spacing: $letter-spacing-tight;
+}
