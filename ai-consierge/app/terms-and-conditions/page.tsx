@@ -53,10 +53,11 @@ const TermsAndConditions = () => {
         </ul>
 
         <h3 className="font-semibold mt-6 mb-2">1.4 Acceptable Use</h3>
+        <p>Users must not:</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li>Use the Service for unlawful purposes</li>
-          <li>Abuse, reverse-engineer, or disrupt the platform</li>
-          <li>Upload malicious or misleading content</li>
+          <li>Engage in any activity that violates applicable laws, regulations, or third-party rights.</li>
+          <li>Attempt to gain unauthorized access to the service, disrupt its operation, or reverse-engineer any part of the platform.</li>
+          <li>Upload or distribute content that is malicious, deceptive, misleading, fraudulent, or harmful to users or systems.</li>
         </ul>
 
         <h3 className="font-semibold mt-6 mb-2">1.5 Payments</h3>
