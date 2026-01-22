@@ -327,7 +327,7 @@ const SignUp = ({formToShow, toggleForm}:any) => {
                 {/* email */}
                 <div className="flex flex-col mb-4">
                     <label htmlFor="email" className="text-sm font-medium mb-2">Email Address</label>
-                    <input value={email} onChange={(e)=>setEmail(e.target.value)} required type="email" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/"  id="email" placeholder="your@email.com" className="inputStyle h-11 p-2 rounded-lg transition focus:border-black focus:border focus:outline-none focus:ring-4 focus:ring-[#004e7c96] focus:ring-opacity-60" />
+                    <input value={email} onChange={(e)=>setEmail(e.target.value)} required type="email"  id="email" placeholder="your@email.com" className="inputStyle h-11 p-2 rounded-lg transition focus:border-black focus:border focus:outline-none focus:ring-4 focus:ring-[#004e7c96] focus:ring-opacity-60" />
                 </div>
     
                 {/* phone  */}
@@ -460,7 +460,7 @@ const SignIn = ({formToShow, toggleForm}:any) => {
 			<form action="POST" onSubmit={signIn}>
 				<div className="flex flex-col mb-4">
                     <label htmlFor="email" className="text-sm font-medium mb-2">Email Address</label>
-                    <input value={email} onChange={(e)=>setEmail(e.target.value)} required type="email" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/"  id="email" placeholder="your@email.com" className="inputStyle h-11 p-2 rounded-lg transition focus:border-black focus:border focus:outline-none focus:ring-4 focus:ring-[#004e7c96] focus:ring-opacity-60" />
+                    <input value={email} onChange={(e)=>setEmail(e.target.value)} required type="email" id="email" placeholder="your@email.com" className="inputStyle h-11 p-2 rounded-lg transition focus:border-black focus:border focus:outline-none focus:ring-4 focus:ring-[#004e7c96] focus:ring-opacity-60" />
                 </div>
                 <div className="flex flex-col mb-4">
                     <label htmlFor="password" className="text-sm font-medium mb-2">Password</label>
