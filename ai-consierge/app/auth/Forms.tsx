@@ -433,7 +433,7 @@ const SignIn = ({formToShow, toggleForm}:any) => {
     };
     
 	const forgotPassword = async() => {
-		const userEmail = prompt('Enter yout account email') as string
+		const userEmail = prompt('Enter your account email') as string
 		try {
 		  await sendPasswordResetEmail(auth,userEmail).then(async ()=>{
 			alert("Password reset email sent!");
