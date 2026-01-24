@@ -7,8 +7,11 @@ import AuthProvider from "./_components/AuthListener";
 
 
 export const metadata: Metadata = {
-  title: "makvue Concierge",
+  title: "Makvue Concierge",
   description: "Your AI-powered personal assistant",
+  icons:{
+    icon: "/plain-logo.jpg",
+  }
 };
 
 export default function RootLayout({

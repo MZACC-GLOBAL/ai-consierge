@@ -309,9 +309,10 @@ const SignUp = ({formToShow, toggleForm}:any) => {
         <div className="pt-8">
             {/* header */}
             <div className="space-y-4 text-center pb-8">
-                <div className="mx-auto w-16 h-16 bg-gradient-to-br from-[#004E7C] to-[#0067A3] rounded-2xl flex items-center justify-center shadow-lg">
-                    <Hotel className="w-8 h-8 text-white" />
+                <div className="mx-auto w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+                    <img src="/plain-logo.jpg"/>
                 </div>
+				
                 <div>
                     <p className="text-3xl text-[#004E7C]">AI Concierge</p>
                     <p className="mt-2 text-gray-600">{formToShow ? 'Create your account to get started' : 'Welcome back! Please sign in'}</p>
@@ -448,8 +449,8 @@ const SignIn = ({formToShow, toggleForm}:any) => {
 		<div>
             {/* header */}
             <div className="space-y-4 text-center pb-8">
-                <div className="mx-auto w-16 h-16 bg-gradient-to-br from-[#004E7C] to-[#0067A3] rounded-2xl flex items-center justify-center shadow-lg">
-                    <Hotel className="w-8 h-8 text-white" />
+                <div className="mx-auto w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+                    <img src="/plain-logo.jpg"/>
                 </div>
                 <div>
                     <p className="text-3xl text-[#004E7C]">AI Concierge</p>

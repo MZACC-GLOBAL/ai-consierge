@@ -41,8 +41,8 @@ const SideBar = () => {
         {/* header */}
         <div className="p-6 border-b border-[#003D5F]">
             <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-[#F5B700] rounded-xl flex items-center justify-center shadow-md">
-                  <Hotel className="w-6 h-6 text-[#004E7C]" />
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md overflow-hidden">
+                  <img src="/logo.jpg"/>
                 </div>
                 <div>
                   <h1 className="text-white">AI Concierge</h1>
