@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     icon: "/plain-logo.jpg",
   },
   other:{
-    facebook-domain-verification:"wh4ez6msxuzf7ndaewb1tbc9knbhho"
+    "facebook-domain-verification":"wh4ez6msxuzf7ndaewb1tbc9knbhho"
   }
 };
 
