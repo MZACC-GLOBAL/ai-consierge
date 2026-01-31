@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description: "Your AI-powered personal assistant",
   icons:{
     icon: "/plain-logo.jpg",
+  },
+  other:{
+    facebook-domain-verification:"wh4ez6msxuzf7ndaewb1tbc9knbhho"
   }
 };
 
