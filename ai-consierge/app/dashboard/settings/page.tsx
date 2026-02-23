@@ -8,7 +8,7 @@ import { Label } from '@/app/_components/Label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/_components/Select'
 import { Switch } from '@/app/_components/Switch'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/app/_components/Tabs'
-import { Bell, Building2, Check, Copy, Save, Shield, User } from 'lucide-react'
+import { Bell, Building2, Check, Copy, Save, Shield, User, Send, HeadphonesIcon, MessageSquare } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useAuth } from '@/app/_components/AuthListener'
 import { doc, updateDoc } from '@firebase/firestore'
@@ -16,13 +16,14 @@ import {auth, db} from '../../../firebase/firebase'
 import { sendPasswordResetEmail, signOut } from 'firebase/auth'
 import { EmailAuthProvider, reauthenticateWithCredential, verifyBeforeUpdateEmail } from "firebase/auth";
 
+
 interface ProfileSettingsProps {
   user: { name: string; email: string } | null;
 }
 type Country = {
-	name: string;
-	cca2: string; // ISO2
-	dial_code: string; // e.g. +1
+  name: string;
+  cca2: string; // ISO2
+  dial_code: string; // e.g. +1
 };
 
 const Settings = ({ user }: ProfileSettingsProps) => {
@@ -415,11 +416,13 @@ const Settings = ({ user }: ProfileSettingsProps) => {
             <p className="text-gray-600">Manage your account and preferences</p>
         </div>
         <Tabs defaultValue="profile" className="w-full ">
+          
           <TabsList className="bg-white mt-6 shadow-sm font-semibold">
             <TabsTrigger value="profile">Profile</TabsTrigger>
             <TabsTrigger value="property">Property</TabsTrigger>
             <TabsTrigger value="notifications">Notifications</TabsTrigger>
             <TabsTrigger value="security">Security</TabsTrigger>
+            <TabsTrigger value="support">Concierge Support</TabsTrigger>
           </TabsList>
 
           <TabsContent value="profile" className="mt-4 bg-white rounded-lg shadow">
@@ -712,10 +715,50 @@ const Settings = ({ user }: ProfileSettingsProps) => {
               </CardContent>
             </Card>
           </TabsContent>
+
+     
+          <TabsContent value="support" className="mt-6 bg-white rounded-lg shadow">
+            <Card className="border-0 shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-blue-700">
+                  <HeadphonesIcon className="w-5 h-5" />
+                  24/7 AI Concierge Support
+                </CardTitle>
+                <CardDescription>Get instant assistance with your property management via our AI bots.</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Telegram Bot Card */}
+                  <div className="p-6 border rounded-xl bg-blue-50/50 hover:border-blue-400 transition-all group text-center">
+                    <div className="w-16 h-16 bg-[#0088cc] rounded-full flex items-center justify-center text-white mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform">
+                      <Send size={32} />
+                    </div>
+                    <h3 className="font-bold text-2xl mb-2">Telegram Concierge</h3>
+                    <p className="text-gray-600 mb-8">Access secure AI-powered insights, manage requests, and get 24/7 support directly on Telegram.</p>
+                    <Button asChild className="w-full bg-[#0088cc] hover:bg-[#0077b5] text-white font-semibold py-6 text-lg">
+                      <a href="https://t.me/makvue_concierge_bot" target="_blank" rel="noreferrer">Launch Telegram</a>
+                    </Button>
+                  </div>
+
+                  {/* WhatsApp Bot Card */}
+                  <div className="p-6 border rounded-xl bg-green-50/50 hover:border-green-400 transition-all group text-center">
+                    <div className="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center text-white mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform">
+                      <MessageSquare size={32}/>
+                    </div>
+                    <h3 className="font-bold text-2xl mb-2">WhatsApp Concierge</h3>
+                    <p className="text-gray-600 mb-8">Quickly chat with our AI concierge and manage your property through WhatsApp.</p>
+                    <Button asChild className="w-full bg-[#25D366] hover:bg-[#1ebd57] text-white font-semibold py-6 text-lg">
+                      <a href="#" target="_blank" rel="noreferrer">Launch WhatsApp</a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
         </Tabs>
 
     </div>
   )
 }
 
-export default Settings
+export default Settings;

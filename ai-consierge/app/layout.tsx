@@ -7,10 +7,13 @@ import AuthProvider from "./_components/AuthListener";
 
 
 export const metadata: Metadata = {
-  title: "Makvue Concierge",
+  title: "Makvue Concierge by Makcit limited",
   description: "Your AI-powered personal assistant",
   icons:{
     icon: "/plain-logo.jpg",
+  },
+  other:{
+   "facebook-domain-verification":"wh4ez6msxuzf7ndaewb1tbc9knbhho"
   }
 };
 
