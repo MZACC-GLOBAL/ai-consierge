@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   },
   other:{
    "facebook-domain-verification":"wh4ez6msxuzf7ndaewb1tbc9knbhho"
+   
   }
 };
 
